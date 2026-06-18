@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    background:#121212;
+    color:white;
+    font-family:sans-serif;
+}
+
+.header{
+    padding:16px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.card{
+    margin:12px;
+    padding:16px;
+    background:#1E1E1E;
+    border-radius:16px;
+}
+
+button{
+    width:100%;
+    border:none;
+    border-radius:12px;
+    padding:14px;
+    font-size:16px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+    Macro App
+</div>
+
+<div class="card">
+    <p>Versão: <span id="version"></span></p>
+
+    <button onclick="Android.toast('Olá do HTML!')">
+        Testar Java
+    </button>
+</div>
+
+<script>
+document.getElementById("version").innerText =
+    Android.getVersion();
+</script>
+
+</body>
+</html>
