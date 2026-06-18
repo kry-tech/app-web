@@ -15,33 +15,44 @@ body{
     background:#121212;
     color:white;
     font-family:sans-serif;
-    padding:16px;
-}
 
-.header{
-    font-size:28px;
-    font-weight:bold;
-    margin-bottom:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+    padding:20px;
 }
 
 .card{
+    width:100%;
+    max-width:400px;
+
     background:#1E1E1E;
     border-radius:20px;
     padding:20px;
-    margin-bottom:16px;
+}
+
+.title{
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:10px;
 }
 
 .version{
     color:#aaa;
-    margin-bottom:16px;
+    margin-bottom:20px;
 }
 
 button{
     width:100%;
     height:52px;
+
     border:none;
     border-radius:14px;
+
     font-size:16px;
+
     background:#4CAF50;
     color:white;
 }
@@ -50,11 +61,12 @@ button{
 
 <body>
 
-<div class="header">
-    Macro App
-</div>
-
 <div class="card">
+
+    <div class="title">
+        Macro App
+    </div>
+
     <div class="version">
         Versão: <span id="version"></span>
     </div>
@@ -62,6 +74,7 @@ button{
     <button onclick="Android.toast('Olá do HTML!')">
         Testar Java
     </button>
+
 </div>
 
 <script>
